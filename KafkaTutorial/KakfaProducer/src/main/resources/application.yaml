@@ -1,0 +1,8 @@
+server:
+  port: 9999
+kafka:
+  bootstrap-servers: localhost:9092
+  sink-topic-name: SimpleStringTopic
+logging:
+  config:
+    classpath: log4j2.xml
