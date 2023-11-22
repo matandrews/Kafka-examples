@@ -1,0 +1,7 @@
+server:
+  port: 9998
+kafka:
+  bootstrap-servers: localhost:9092
+  source-topic-name: SimpleStringTopic
+  consumer-group-identifier: my-simple-topic-consumer
+  poll-interval: 5000

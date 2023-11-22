@@ -1,8 +1,8 @@
-package org.lonesheep.kafka.producer.main;
+package org.lonesheep.kafka.consumer.main;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.lonesheep.kafka.producer.service.SimpleProducer;
+import org.lonesheep.kafka.consumer.service.SimpleConsumer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -13,26 +13,26 @@ import org.springframework.context.annotation.ComponentScan;
  * The command line runner which launches the application.
  */
 @SpringBootApplication
-@ComponentScan(basePackages = {"org.lonesheep.kafka.producer"})
-public class SpringBootConsoleApplication implements CommandLineRunner {
+@ComponentScan(basePackages = {"org.lonesheep.kafka.consumer"})
+public class SimpleConsumerRunner implements CommandLineRunner {
 
     /**
      * The class level logger.
      */
-    private static final Logger LOG = LogManager.getLogger(SpringBootConsoleApplication.class);
+    private static final Logger LOG = LogManager.getLogger(SimpleConsumerRunner.class);
 
     /**
-     * The kafka producer example.  This is an autowired Spring component.
+     * The kafka consumer example.  This is an autowired Spring component.
      */
     @Autowired
-    private SimpleProducer simpleProducer;
+    private SimpleConsumer simpleConsumer;
 
     /**
      * The entry point into the component.
      * @param args any command line arguments (there are none).
      */
     public static void main(final String[] args) {
-        SpringApplication.run(SpringBootConsoleApplication.class);
+        SpringApplication.run(SimpleConsumerRunner.class);
     }
 
     /**
@@ -42,7 +42,7 @@ public class SpringBootConsoleApplication implements CommandLineRunner {
      */
     @Override
     public final void run(final String... args) {
-        LOG.info("Invoking the producer.");
-        simpleProducer.start();
+        LOG.info("Invoking the consumer.");
+        this.simpleConsumer.start();
     }
 }
