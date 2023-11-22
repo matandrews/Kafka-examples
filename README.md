@@ -1,6 +1,13 @@
 # Kafka-examples
 A collection of sample kafka projects.
 
+## Preparing the project
+
+The *main* folder is under KafkaTutorials.  
+
+In IntelliJ ensure that the pom.xml here is set as a the maven project.
+
+If building on the command line, navigate to KafkaTutorials and run the maven build from this location.
 ## Prerequisites
 
 All the readme files in this solution assume you are using the docker compose files to create your development kafka environment.

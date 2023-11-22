@@ -7,6 +7,15 @@ This is a very simple Kafka producer which writes a key/value pair to a kafka to
 
 The solution assumes you have a working Kafka environment at *localhost:9092*.  If you don't have this environment use the docker compose files mentioned in the root README.md file.
 
+## Running the project
+
+Compile the solution using maven.
+The startup class *SpringBootConsoleApplication* is located under;
+
+/src/main/java/org/lonesheep/kafka/producer/main
+
+
+
 ### Create Sink Topic
 
 To create the sink (output) topic, the kafka pod is accessed and the kafka-topics command is executed within it, as follows.

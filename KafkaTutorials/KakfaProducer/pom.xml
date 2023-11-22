@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>net.lonesheep.kafka</groupId>
-        <artifactId>KafkaTutorial</artifactId>
+        <artifactId>KafkaTutorials</artifactId>
         <version>0.0.1</version>
     </parent>
 
